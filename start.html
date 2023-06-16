@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0px;
+        }
+        #wrapper{
+            width:1500px;
+            height:900px;
+            background: #CCC;
+            margin:auto;
+            box-sizing: border-box;
+            position: relative;
+        }
+        #maze{
+            width:800px;
+            height: 300px;
+            position: absolute;
+            top: 40px;
+            left:460px;
+            font-size:100px;
+        }
+        #hero{
+            width:450px;
+            height: 500px;
+            position: absolute;
+            top:300px;
+            left: 600px;
+            margin:auto;
+            background: url("./mineworker.PNG");
+            background-repeat: no-repeat;
+        }
+        #start_bt{
+            
+            width:300px;
+            height: 100px;
+            top:700px;
+            left:300px;
+            position:absolute;
+            font-size: 50px;
+            text-align: center;
+            border: 1px solid black;
+            line-height: 100px;
+            
+        }
+        a{
+            width:100%;
+            height:100%;
+        }
+        a:link,a:visited{
+            
+            text-decoration: none;
+            color: black;
+        }
+        #start_bt:hover{
+            background:gray;
+
+        }
+        #howto_bt{
+            width:300px;
+            height:100px;
+            top:700px;
+            left:900px;
+            position:absolute;
+            text-decoration: none;
+            font-size: 50px;
+            text-align: center;
+            border: 1px solid black;     
+            line-height: 100px;       
+        }
+        #howto_bt:hover{
+            background:gray;            
+        }
+    </style>
+    <script>
+        function howto(){
+            let div = document.createElement("div");
+            div.style.width = 1300+"px";
+            div.style.height = 800+"px";
+            div.style.position = "absolute";
+            div.style.left=100+"px";
+            div.style.top=50+"px";
+            div.style.border = "1px solid black";
+            div.style.background= "url(\"./images/howto.PNG\")";
+            div.style.backgroundSize="1300px 800px";
+            wrapper.appendChild(div);
+
+            let bt = document.createElement("button");
+            bt.innerText = "X";
+            bt.style.fontSize=80+"px";
+            bt.style.textAlign="center";
+            bt.style.width = 100+"px";
+            bt.style.height = 100+"px";
+            bt.style.background = "#CCC";
+            bt.style.borderRadius = "1px solid black";
+            bt.style.position = "absolute";
+            bt.style.left = 1350 + "px";
+            bt.style.top = 25+"px";
+            bt.style.borderRadius="100%";
+            wrapper.appendChild(bt);
+
+            bt.addEventListener("click",function(){
+                div.remove();
+                bt.remove();
+                
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <div id="wrapper">
+        <h2 id="maze">MAZE GAME</h2>
+        <div id="hero"></div>
+        
+        <a href="./design.html" id="start_bt">Start</a>
+        
+       
+        <a id="howto_bt" onClick="howto()">How to</a>
+       
+    </div>
+    
+</body>
+</html>

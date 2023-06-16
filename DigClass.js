@@ -1,0 +1,5 @@
+class DigClass extends GameObject{
+
+}
+
+

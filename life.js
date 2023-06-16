@@ -1,0 +1,4 @@
+class life extends GameObject{
+
+    
+}
